@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: digital-diner-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: POSTGRES_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+    healthCheckPath: /api/health
+    databases:
+      - name: digital-diner-postgres
+        databaseName: digital_diner
+        user: digital_diner_user
+        plan: free 

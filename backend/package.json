@@ -1,0 +1,43 @@
+{
+  "name": "digital-diner-backend",
+  "version": "1.0.0",
+  "description": "Backend for The Digital Diner restaurant ordering system",
+  "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "seed": "node src/seed/menuItems.js",
+    "seed:admin": "node src/seed/adminUsers.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync-db": "node src/scripts/sync-db.js"
+  },
+  "keywords": [
+    "restaurant",
+    "ordering",
+    "mern",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
